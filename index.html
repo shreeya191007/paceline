@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paceline — Chase Every Second</title>
+<meta name="description" content="Race-day gear, trail-tested essentials and everyday running kit, curated by runners in Glasgow.">
+<meta name="theme-color" content="#f0e8da">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/main.js"></script>
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<div id="top"></div>
+<main id="main">
+
+<!-- HERO: rotating, motivating captions over one image -->
+<div class="hero">
+  <img src="src/Home/hero_section/image1.webp" width="1440" height="720" alt="A runner striding across a sunlit desert ridge" fetchpriority="high">
+  <div class="slide">
+    <div class="eyebrow">Autumn / Winter '26 collection</div>
+    <h1>Chase<br>Every Second.</h1>
+    <p>Race-day gear, trail-tested essentials, and everyday kit — curated by runners, worn on every terrain.</p>
+    <div class="cta"><a class="btn b-p" href="#arrivals">Shop new arrivals →</a><a class="btn b-o" href="about.html">Read our story</a></div>
+  </div>
+  <div class="slide">
+    <div class="eyebrow">Progress over perfection</div>
+    <h1>Every Step<br>Counts.</h1>
+    <p>Your first mile matters as much as your thousandth. Lace up — future you is already proud.</p>
+    <div class="cta"><a class="btn b-p" href="#categories">Find your discipline →</a><a class="btn b-o" href="#explore">Meet the runners</a></div>
+  </div>
+  <div class="slide">
+    <div class="eyebrow">Your pace. Your race.</div>
+    <h1>Run Your<br>Own Race.</h1>
+    <p>Slow days, strong days, rainy days — they all move you forward. We'll keep the road beneath you.</p>
+    <div class="cta"><a class="btn b-p" href="#arrivals">Shop new arrivals →</a><a class="btn b-o" href="about.html">Visit the store</a></div>
+  </div>
+  <div class="dots" role="group" aria-label="Choose slide"></div>
+</div>
+
+<!-- 01 CATEGORIES -->
+<section id="categories"><div class="wrap">
+  <div class="sh rv"><div><div class="eyebrow">01 · Shop by category</div><h2>Every discipline. Every distance.</h2></div><a class="link" href="brands.html">View all collections <span>→</span></a></div>
+  <div class="grid4 rv">
+    <a class="cat" href="footwear.html"><img loading="lazy" src="src/Home/category_section/image1.webp" width="313" height="420" alt=""><h3>Road Running</h3><p>Speed, cushion, race-day.</p><span class="link">Shop →</span></a>
+    <a class="cat" href="footwear.html?type=Shoes"><img loading="lazy" src="src/Home/category_section/image2.webp" width="313" height="420" alt=""><h3>Trail Running</h3><p>Grip, protection, adventure.</p><span class="link">Shop →</span></a>
+    <a class="cat" href="apparel.html"><img loading="lazy" src="src/Home/category_section/image3.webp" width="313" height="420" alt=""><h3>Apparel</h3><p>Layers built for every mile.</p><span class="link">Shop →</span></a>
+    <a class="cat" href="apparel.html?type=Accessories"><img loading="lazy" src="src/Home/category_section/image4.webp" width="313" height="420" alt=""><h3>Accessories</h3><p>Watches, packs, fuel.</p><span class="link">Shop →</span></a>
+  </div>
+</div></section>
+
+<!-- 02 NEW ARRIVALS -->
+<section id="arrivals" style="padding-top:0"><div class="wrap">
+  <div class="sh rv"><div><div class="eyebrow">02 · Just landed</div><h2>New arrivals for the run.</h2></div>
+    <div class="tabs" role="group" aria-label="Filter products">
+      <button data-f="new" aria-pressed="true">New In</button><button data-f="bs" aria-pressed="false">Best Sellers</button><button data-f="race" aria-pressed="false">Race Day</button><button data-f="trail" aria-pressed="false">Trail</button>
+    </div></div>
+  <div class="grid4 rv">
+    <article class="pc" data-tags="new bs"><div class="ph"><span class="tag">NEW</span><button class="heart" aria-pressed="false" aria-label="Save to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></svg></button><img loading="lazy" src="src/Home/arrivals_section/image.webp" width="313" height="340" alt="Dark running shoe with white midsole"></div><small>ON</small><h3>Cloudmonster 3 — Hyper Lily</h3><b>£210</b></article>
+    <article class="pc" data-tags="new race"><div class="ph"><span class="tag">NEW</span><button class="heart" aria-pressed="false" aria-label="Save to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></svg></button><img loading="lazy" src="src/Home/arrivals_section/image.webp" width="313" height="340" alt="Dark running shoe with white midsole"></div><small>Nike</small><h3>Vaporfly 4 — Volt Ice</h3><b>£240</b></article>
+    <article class="pc" data-tags="new bs trail"><div class="ph"><span class="tag">NEW</span><button class="heart" aria-pressed="false" aria-label="Save to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></svg></button><img loading="lazy" src="src/Home/arrivals_section/image.webp" width="313" height="340" alt="Dark running shoe with white midsole"></div><small>Hoka</small><h3>Tecton X 4 — Frost / Tangerine</h3><b>£220</b></article>
+    <article class="pc" data-tags="new race"><div class="ph"><span class="tag s">SALE</span><button class="heart" aria-pressed="false" aria-label="Save to wishlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6-8 11-8 11z"/></svg></button><img loading="lazy" src="src/Home/arrivals_section/image.webp" width="313" height="340" alt="Dark running shoe with white midsole"></div><small>Asics</small><h3>Megablast — White / Orange Glow</h3><b>£210</b></article>
+  </div>
+</div></section>
+
+<!-- STORY -->
+<section class="story dark">
+  <img loading="lazy" src="src/Home/story_section/image.webp" width="720" height="620" alt="A trail runner on a rocky summit above the clouds">
+  <div class="txt rv">
+    <div class="eyebrow">Our story</div>
+    <h2>Built by runners.<br>Worn on every terrain.</h2>
+    <p>PACELINE opened in 2015 with one goal — to become an all-inclusive hub for runners. Ten seasons in, we still hand-pick every shoe, every layer and every accessory in our range. From your first Couch-to-5K to your third marathon, we prepare, empower and equip you.</p>
+    <div class="stats"><div><b data-n="10" data-s="+">10+</b><span>Years in sport</span></div><div><b data-n="40" data-s="+">40+</b><span>Brands stocked</span></div><div><b data-n="1">1</b><span>Store in Glasgow</span></div></div>
+    <div><a class="btn b-o" href="about.html">Read the full story →</a></div>
+  </div>
+</section>
+
+<!-- EXPLORE: hover for runner achievements -->
+<section id="explore"><div class="wrap">
+  <div class="sh rv"><div><div class="eyebrow">03 · Find your stride</div><h2>Stories that keep us moving.</h2></div><p style="color:var(--clay)">Hover (or tap) a runner to see what they've achieved.</p></div>
+  <div class="fgrid rv">
+    <div class="hv" tabindex="0"><img loading="lazy" src="src/Home/explore_section/image_male.webp" width="644" height="480" alt="Male runner sprinting on a running track">
+      <h3>Men's Running</h3><p>Race-day kit from real-world heroes.</p><a class="link" href="men.html">Shop now <span>→</span></a>
+      <div class="tip"><strong>Dan K. · Club pacer</strong>Took 9 minutes off his marathon in one season and now paces 3:30 groups every Wednesday.</div></div>
+    <div class="hv" tabindex="0"><img loading="lazy" src="src/Home/explore_section/image_female.webp" width="643" height="480" alt="Female runner driving her knee up during a track session">
+      <h3>Women's Running</h3><p>20% of profits from kits go to Girls Run Glasgow.</p><a class="link" href="women.html">Shop now <span>→</span></a>
+      <div class="tip"><strong>Maya T. · Paceline club captain</strong>Went from Couch-to-5K to a 3:12 marathon in 18 months — now she coaches 40+ first-time runners every season. Your turn next.</div></div>
+  </div>
+</div></section>
+
+</main>
+<div id="ftr"></div>
+</body>
+</html>
