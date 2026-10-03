@@ -9,13 +9,13 @@
   /* ---------- Layout ---------- */
   const links = [['Men', 'men.html'], ['Women', 'women.html'], ['Footwear', 'footwear.html'], ['Apparel', 'apparel.html'], ['Brands', 'brands.html'], ['Sale', 'sale.html'], ['About', 'about.html']];
   // Footer link targets (anything not listed stays a placeholder)
-  const dest = { "Men's": 'men.html', "Women's": 'women.html', Footwear: 'footwear.html', Apparel: 'apparel.html', Accessories: 'apparel.html?type=Accessories', Sale: 'sale.html', 'About Us': 'about.html', 'Size Guides': 'footwear.html', 'Gait Analysis': 'about.html' };
+  const dest = { "Men's": 'men.html', "Women's": 'women.html', Footwear: 'footwear.html', Apparel: 'apparel.html', Accessories: 'apparel.html?type=Accessories', Sale: 'sale.html', 'About Us': 'about.html', 'Size Guides': 'footwear.html', 'Gait Analysis': 'gait.html' };
   $('#top').innerHTML = `<div class="topbar"><div class="wrap"><span>Free UK delivery over £75 · 30-day returns</span><span><b>Autumn '26 — new arrivals dropping weekly</b></span><span>Store: Glasgow · EN / £ GBP</span></div></div>
   <header id="hdr"><div class="wrap"><a class="logo" href="index.html" aria-label="Paceline home">PACELINE</a>
   <nav id="nav" aria-label="Main"><ul>${links.map(([t, h]) => `<li><a href="${h}"${t.toLowerCase() === page ? ' aria-current="page"' : ''}>${t}</a></li>`).join('')}</ul></nav>
-  <div class="tools"><button class="ib" aria-label="Search">${ico('<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>')}</button>
-  <button class="ib" aria-label="Account">${ico('<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>')}</button>
-  <button class="ib" id="cart" aria-label="Cart, 2 items">${ico('<path d="M3 4h2l2.5 11h10L20 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/>')}<span class="badge" id="cnt">2</span></button>
+  <div class="tools"><button class="ib" id="sbtn" aria-label="Search">${ico('<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>')}</button>
+  <button class="ib" id="abtn" aria-label="Log in or sign up">${ico('<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>')}</button>
+  <button class="ib" id="cart" aria-label="Cart, 0 items">${ico('<path d="M3 4h2l2.5 11h10L20 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/>')}<span class="badge" id="cnt" hidden>0</span></button>
   <button class="ib burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span><i></i><i></i><i></i></span></button></div></div></header><div class="scrim" id="scrim"></div>`;
   const cols = { Shop: ["Men's", "Women's", 'Footwear', 'Apparel', 'Accessories', 'Sale'], Help: ['Contact', 'Shipping', 'Returns', 'Size Guides', 'Gait Analysis', 'FAQs'], Company: ['About Us', 'Store · Glasgow', 'Sustainability', 'Careers', 'Wholesale', 'Press'], Follow: ['Instagram', 'Strava', 'TikTok', 'YouTube', 'Newsletter', 'Blog'] };
   $('#ftr').innerHTML = `<footer><div class="wrap"><div class="news"><div><h2>Join the Paceline club.</h2><p>Early access to new drops, race-day tips, and 10% off your first order.</p></div>

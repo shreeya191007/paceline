@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Paceline</title>
+<meta name="description" content="Checkout – Paceline">
+<meta name="theme-color" content="#f0e8da">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/store.js"></script>
+<script defer src="js/products.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/checkout.js"></script>
+</head>
+<body data-page="checkout">
+<a class="skip" href="#main">Skip to content</a>
+<div id="top"></div>
+<main id="main">
+
+<div class="wrap ah sp">
+  <div class="crumb"><a href="index.html">Home</a> / Checkout</div>
+  <h1 class="long">Checkout</h1>
+  <p>Nearly there — the finish line is in sight.</p>
+</div>
+<section style="padding-top:10px"><div class="wrap">
+  <div id="cempty" class="gcard conf cwrap" hidden><h2>Your bag is empty</h2><p>Add something for your next run.</p><div class="acts"><a class="btn b-k" href="footwear.html">Shop footwear</a><a class="btn b-d" href="sale.html">See the sale</a></div></div>
+  <div id="cdone" class="gcard conf cwrap" hidden tabindex="-1" aria-live="polite"></div>
+  <div class="co" id="co">
+    <form id="cform" novalidate>
+      <h2>Delivery details</h2>
+      <div class="fld"><label for="name">Full name</label><input id="name" autocomplete="name" aria-describedby="e-name"><span class="err" id="e-name" aria-live="polite"></span></div>
+      <div class="fld"><label for="email">Email</label><input id="email" type="email" autocomplete="email" aria-describedby="e-email"><span class="err" id="e-email" aria-live="polite"></span></div>
+      <div class="fld"><label for="address">Street address</label><input id="address" autocomplete="street-address" aria-describedby="e-address"><span class="err" id="e-address" aria-live="polite"></span></div>
+      <div class="row2">
+        <div class="fld"><label for="city">Town / city</label><input id="city" autocomplete="address-level2" aria-describedby="e-city"><span class="err" id="e-city" aria-live="polite"></span></div>
+        <div class="fld"><label for="postcode">Postcode</label><input id="postcode" autocomplete="postal-code" aria-describedby="e-postcode"><span class="err" id="e-postcode" aria-live="polite"></span></div>
+      </div>
+      <h2>Delivery method</h2>
+      <div class="radios" role="radiogroup" aria-label="Delivery method">
+        <label class="rad"><input type="radio" name="method" value="standard" checked><span>Standard UK delivery · 2–3 days</span><b id="d-std">£4.95</b></label>
+        <label class="rad"><input type="radio" name="method" value="express"><span>Express · next working day</span><b>£8.95</b></label>
+      </div>
+      <button class="btn b-k" id="place" style="width:100%;justify-content:center">Place order</button>
+      <p class="note">Demo checkout: no payment is taken and nothing is shipped.</p>
+    </form>
+    <aside class="cs" id="csum" aria-label="Order summary"></aside>
+  </div>
+</div></section>
+</main>
+<div id="ftr"></div>
+</body>
+</html>

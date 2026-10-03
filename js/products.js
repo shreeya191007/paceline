@@ -56,12 +56,14 @@
     P('Nike', 'Run Cap — Sand', 'Accessories', 'cap', 'u', 24, C.sand)
   ];
 
+  window.PRODUCTS.forEach((p, i) => { p.id = 'p' + i; p.i = i; });
+
   // Tints applied to the shoe photo so each colourway looks distinct
   window.SHOE_FILTERS = ['none', 'hue-rotate(28deg) saturate(.9)', 'hue-rotate(-22deg) saturate(1.05)', 'sepia(.45) saturate(.85) hue-rotate(-8deg)'];
 
   const BG = ['#efe3cc', '#e8dcc0', '#e2d6b8', '#efdcc0'];
   /* Returns an SVG string for a given product (index i varies the background) */
-  window.artSVG = (p, i) => {
+  window.artSVG = (p, i, deco) => {
     const [a, b] = p.c; let s = '';
     switch (p.kind) {
       case 'jacket': s = `<path fill="${a}" d="M95 70 L130 55 Q156 72 183 55 L218 70 L262 195 L230 208 L212 150 L212 285 L100 285 L100 150 L82 208 L50 195Z"/><path fill="${b}" d="M130 55 Q156 74 183 55 L190 42 Q156 60 122 42Z"/><path stroke="${b}" stroke-width="3" fill="none" d="M156 68V285"/><path fill="${b}" opacity=".55" d="M112 220h34v8h-34zM166 220h34v8h-34z"/>`; break;
@@ -75,6 +77,23 @@
       case 'bottle': s = `<rect x="120" y="80" width="72" height="210" rx="22" fill="${a}"/><rect x="132" y="46" width="48" height="38" rx="8" fill="${b}"/><rect x="120" y="150" width="72" height="50" fill="${b}" opacity=".55"/>`; break;
       case 'socks': s = `<path fill="${a}" d="M115 50h70v140l60 40q17 32-13 50h-82q-30-10-35-50z"/><path fill="${b}" d="M115 50h70v30h-70z"/>`; break;
     }
-    return `<svg viewBox="0 0 313 340" role="img" aria-label="${p.name}" xmlns="http://www.w3.org/2000/svg"><rect width="313" height="340" fill="${BG[i % 4]}"/><circle cx="156" cy="170" r="132" fill="#fff" opacity=".28"/><ellipse cx="156" cy="312" rx="88" ry="9" fill="#000" opacity=".12"/>${s}</svg>`;
+    return `<svg viewBox="0 0 313 340" ${deco ? 'aria-hidden="true"' : `role="img" aria-label="${p.name}"`} xmlns="http://www.w3.org/2000/svg"><rect width="313" height="340" fill="${BG[i % 4]}"/><circle cx="156" cy="170" r="132" fill="#fff" opacity=".28"/><ellipse cx="156" cy="312" rx="88" ry="9" fill="#000" opacity=".12"/>${s}</svg>`;
+  };
+
+  /* Image/illustration markup for any product (deco = purely decorative, hidden from screen readers) */
+  window.productMedia = (p, deco) => p.kind === 'shoe'
+    ? `<img loading="lazy" src="src/Home/arrivals_section/image.webp" width="313" height="340" alt="${deco ? '' : p.name}" style="filter:${window.SHOE_FILTERS[p.c]}">`
+    : window.artSVG(p, p.i, deco);
+
+  /* Search: every word typed must match the start of a word in the name, brand, type, gender or "sale" */
+  window.searchProducts = q => {
+    const toks = String(q).toLowerCase().replace(/['’]/g, '').split(/[^a-z0-9]+/).filter(Boolean);
+    if (!toks.length) return [];
+    return window.PRODUCTS.filter(p => {
+      const words = [p.name, p.brand, p.group, p.kind, p.tag || '', p.was ? 'sale discount' : '',
+        p.g === 'm' ? 'men mens male' : p.g === 'w' ? 'women womens female ladies' : 'unisex']
+        .join(' ').toLowerCase().replace(/['’]/g, '').split(/[^a-z0-9]+/);
+      return toks.every(t => words.some(w => w.startsWith(t) || (t.endsWith('s') && w.startsWith(t.slice(0, -1)))));
+    });
   };
 })();

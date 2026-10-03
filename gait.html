@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Gait Analysis — Paceline</title>
+<meta name="description" content="Book a free 45-minute gait analysis at Paceline, Glasgow.">
+<meta name="theme-color" content="#f0e8da">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/store.js"></script>
+<script defer src="js/products.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/gait.js"></script>
+</head>
+<body data-page="gait">
+<a class="skip" href="#main">Skip to content</a>
+<div id="top"></div>
+<main id="main">
+
+<div class="wrap ah sp">
+  <div class="crumb"><a href="index.html">Home</a> / Gait analysis</div>
+  <h1 class="long">Book your gait analysis</h1>
+  <p>Run smoother, stronger and injury-free. Our free 45-minute clinic finds the shoe that moves with you — not against you.</p>
+</div>
+<section style="padding-top:20px"><div class="wrap gait">
+  <div>
+    <div class="eyebrow">What to expect</div><h2>Three steps to a better stride.</h2>
+    <ol class="steps">
+      <li><div><b>Warm-up jog</b><p>A relaxed few minutes on our treadmill while Jamie films your stride from behind and the side.</p></div></li>
+      <li><div><b>Slow-motion review</b><p>We watch it together, frame by frame, and talk through how your foot lands and rolls.</p></div></li>
+      <li><div><b>Your shortlist</b><p>Rae picks shoes that suit your gait, goals and budget. Try them, run in them, then decide.</p></div></li>
+    </ol>
+    <ul class="facts"><li>Free</li><li>45 minutes</li><li>Saturdays 10:00–16:00</li><li>No obligation to buy</li></ul>
+    <p class="note">Bring the running shoes you wear now — they tell us a lot. Wear comfortable kit you can run in.</p>
+  </div>
+  <div class="gcard" id="gcard">
+    <form id="gform" novalidate>
+      <h2>Reserve your spot</h2><p class="sub">Pick a Saturday and a time — it takes under a minute.</p>
+      <fieldset class="fld"><legend>1. Choose a Saturday</legend><div class="chipset" id="dates"></div><span class="err" id="e-date" aria-live="polite"></span></fieldset>
+      <fieldset class="fld"><legend>2. Choose a time</legend><div class="chipset" id="times"></div><span class="err" id="e-time" aria-live="polite"></span></fieldset>
+      <div class="fld"><label for="name">Full name</label><input id="name" autocomplete="name" aria-describedby="e-name"><span class="err" id="e-name" aria-live="polite"></span></div>
+      <div class="row2">
+        <div class="fld"><label for="email">Email</label><input id="email" type="email" autocomplete="email" aria-describedby="e-email"><span class="err" id="e-email" aria-live="polite"></span></div>
+        <div class="fld"><label for="phone">Phone <small>(optional)</small></label><input id="phone" type="tel" autocomplete="tel" aria-describedby="e-phone"><span class="err" id="e-phone" aria-live="polite"></span></div>
+      </div>
+      <div class="fld"><label for="exp">Your running level</label><select id="exp"><option>Just starting out</option><option>Casual runner</option><option>Regular (3+ runs a week)</option><option>Racing / training for an event</option><option>Returning from injury</option></select></div>
+      <div class="fld"><label for="goal">Goals or niggles <small>(optional)</small></label><textarea id="goal" maxlength="300" placeholder="e.g. first half marathon, sore left knee"></textarea></div>
+      <label class="chk"><input type="checkbox" id="consent" aria-describedby="e-consent"> <span>I'm happy for Paceline to contact me about this booking.</span></label>
+      <span class="err" id="e-consent" aria-live="polite" style="display:block;margin:-8px 0 14px"></span>
+      <button class="btn b-k" style="width:100%;justify-content:center">Book my gait analysis →</button>
+    </form>
+    <div id="gdone" class="conf" hidden tabindex="-1" aria-live="polite"></div>
+  </div>
+</div></section>
+</main>
+<div id="ftr"></div>
+</body>
+</html>
